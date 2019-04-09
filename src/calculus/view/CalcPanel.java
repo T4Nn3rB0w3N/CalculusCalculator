@@ -10,6 +10,7 @@ public class CalcPanel extends JPanel
 	
 	private CalculusController theController;
 	private SpringLayout theLayout;
+	private JButton enterButton;
 	//////////FOUR BASIC OPERATIONS/////////
 	private JButton multiplyButton;
 	private JButton addButton;
@@ -43,6 +44,7 @@ public class CalcPanel extends JPanel
 		super();
 		this.theController = theController;
 		this.theLayout = new SpringLayout();
+		this.enterButton = new JButton("Enter");
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
@@ -78,7 +80,11 @@ public class CalcPanel extends JPanel
 	
 	private void setupPanel()
 	{
-		
+		this.setLayout(theLayout);
+		this.add(enterButton);
+		this.add(multiplyButton);
+		this.add(addButton);
+		this.add(subtractButton);
 	}
 	
 	private void setupLayout()
