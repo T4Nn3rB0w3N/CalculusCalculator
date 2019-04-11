@@ -118,7 +118,21 @@ public class CalcPanel extends JPanel
 	
 	private void setupListeners()
 	{
+		enterButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
 		
+		clearButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
 	}
 
 }
