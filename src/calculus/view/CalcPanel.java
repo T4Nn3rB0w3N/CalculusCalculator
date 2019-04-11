@@ -18,8 +18,8 @@ public class CalcPanel extends JPanel
 	private JButton divideButton;
 	///////EXPONENTIALS/////////////
 	private JButton logButton; //This is supposed to be for ordinary logarithm operations
-	private JButton raiseByPower; //This is supposed to be for exponentials - GET A BETTER NAME FOR THE VARIABLE-
-	private JButton logarithmNaturale; //This is for the ln button AKA the natural logarithm button -SHORTER NAME PLEASE!-
+	private JButton expButton; //This is supposed to be for exponentials
+	private JButton lnButton; //This is for the ln button AKA the natural logarithm button -SHORTER NAME PLEASE!-
 	
 	private JButton decimalPoint; //This allows the user to use decimal numbers
 	private JButton leftParenthesis; //This is a left paren
@@ -52,8 +52,8 @@ public class CalcPanel extends JPanel
 		this.divideButton = new JButton("/");
 		
 		this.logButton = new JButton("log");
-		this.raiseByPower = new JButton("^");
-		this.logarithmNaturale = new JButton("ln");
+		this.expButton = new JButton("^");
+		this.lnButton = new JButton("ln");
 		
 		this.decimalPoint = new JButton(".");
 		this.leftParenthesis = new JButton("(");
@@ -85,6 +85,26 @@ public class CalcPanel extends JPanel
 		this.add(multiplyButton);
 		this.add(addButton);
 		this.add(subtractButton);
+		this.add(divideButton);
+		
+		this.add(logButton);
+		this.add(expButton);
+		this.add(lnButton);
+		
+		this.add(decimalPoint);
+		this.add(leftParenthesis);
+		this.add(rightParenthesis);
+		
+		this.add(zero);
+		this.add(one);
+		this.add(two);
+		this.add(three);
+		this.add(four);
+		this.add(five);
+		this.add(six);
+		this.add(seven);
+		this.add(eight);
+		this.add(nine);
 	}
 	
 	private void setupLayout()
