@@ -11,6 +11,7 @@ public class CalcPanel extends JPanel
 	private CalculusController theController;
 	private SpringLayout theLayout;
 	private JButton enterButton;
+	private JButton clearButton;
 	//////////FOUR BASIC OPERATIONS/////////
 	private JButton multiplyButton;
 	private JButton addButton;
@@ -19,7 +20,7 @@ public class CalcPanel extends JPanel
 	///////EXPONENTIALS/////////////
 	private JButton logButton; //This is supposed to be for ordinary logarithm operations
 	private JButton expButton; //This is supposed to be for exponentials
-	private JButton lnButton; //This is for the ln button AKA the natural logarithm button -SHORTER NAME PLEASE!-
+	private JButton lnButton; //This is for the natural logarithm button
 	
 	private JButton decimalPoint; //This allows the user to use decimal numbers
 	private JButton leftParenthesis; //This is a left paren
@@ -45,6 +46,7 @@ public class CalcPanel extends JPanel
 		this.theController = theController;
 		this.theLayout = new SpringLayout();
 		this.enterButton = new JButton("Enter");
+		this.clearButton = new JButton("Clear");
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
@@ -82,6 +84,8 @@ public class CalcPanel extends JPanel
 	{
 		this.setLayout(theLayout);
 		this.add(enterButton);
+		this.add(clearButton);
+		
 		this.add(multiplyButton);
 		this.add(addButton);
 		this.add(subtractButton);
