@@ -12,6 +12,8 @@ public class CalcPanel extends JPanel
 	private SpringLayout theLayout;
 	private JButton enterButton;
 	private JButton clearButton;
+	private JTextField inputField;
+	private JTextArea outputArea;
 	//////////FOUR BASIC OPERATIONS/////////
 	private JButton multiplyButton;
 	private JButton addButton;
@@ -47,6 +49,8 @@ public class CalcPanel extends JPanel
 		this.theLayout = new SpringLayout();
 		this.enterButton = new JButton("Enter");
 		this.clearButton = new JButton("Clear");
+		this.inputField = new JTextField("input here");
+		this.outputArea = new JTextArea("");
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
@@ -177,6 +181,90 @@ public class CalcPanel extends JPanel
 			}
 		});
 		
+		//-------------OPERATION ActionListeners
+		multiplyButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		addButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		subtractButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		divideButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		//------------EXPONENTIAL & LOGARITHM ActionListeners
+		logButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		expButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		lnButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		//---------SYNTAX ActionListeners
+		decimalPoint.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		leftParenthesis.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		rightParenthesis.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		});
+		
+		//------------NUMBER ActionListeners
 		zero.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)
