@@ -89,6 +89,8 @@ public class CalcPanel extends JPanel
 		this.setLayout(theLayout);
 		this.add(enterButton);
 		this.add(clearButton);
+		this.add(inputField);
+		this.add(outputArea);
 		
 		this.add(multiplyButton);
 		this.add(addButton);
