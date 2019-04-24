@@ -13,6 +13,11 @@ public class CalculusController
 	
 	public void start()
 	{
-		
+		processInput();
+	}
+	
+	private String processInput(String input)
+	{
+		return "";
 	}
 }
