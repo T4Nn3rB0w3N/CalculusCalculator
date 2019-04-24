@@ -2,6 +2,10 @@ package calculus.controller;
 
 public class CalculusController
 {
+	private int a;
+	private int b;
+	private int c;
+	
 	public CalculusController()
 	{
 		
