@@ -20,4 +20,10 @@ public class CalculusController
 	{
 		return "";
 	}
+	
+	private void recognizeOperations()
+	{
+		
+		
+	}
 }
