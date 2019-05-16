@@ -50,6 +50,7 @@ public class CalcPanel extends JPanel
 		this.enterButton = new JButton("Enter");
 		this.clearButton = new JButton("Clear");
 		this.inputField = new JTextField("input here");
+		theLayout.putConstraint(SpringLayout.WEST, inputField, 49, SpringLayout.WEST, this);
 		this.outputArea = new JTextArea("");
 		
 		this.multiplyButton = new JButton("*");
@@ -63,6 +64,7 @@ public class CalcPanel extends JPanel
 		
 		this.decimalPoint = new JButton(".");
 		this.leftParenthesis = new JButton("(");
+		theLayout.putConstraint(SpringLayout.SOUTH, inputField, -40, SpringLayout.NORTH, leftParenthesis);
 		this.rightParenthesis = new JButton(")");
 		
 		this.zero = new JButton("0");
@@ -267,6 +269,10 @@ public class CalcPanel extends JPanel
 		});
 		
 		//------------NUMBER ActionListeners
+		/*
+		 * Need to find a way where when number buttons are pressed, 
+		 * 		numbers show up in the input field
+		 */
 		zero.addActionListener(new ActionListener()
 		{
 			public void actionPerformed(ActionEvent click)
