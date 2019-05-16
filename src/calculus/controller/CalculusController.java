@@ -1,11 +1,20 @@
 package calculus.controller;
 
+import calculus.view.*;
+
 public class CalculusController
 {
 	private int a;
 	private int b;
 	private int c;
 	private String operation;
+	private CalcFrame theFrame;
+	private CalcPanel thePanel;
+	
+	public CalculusController()
+	{
+		theFrame = new CalcFrame(this);
+	}
 	
 	public CalculusController(int a, int b, int c, String operation)
 	{
@@ -17,7 +26,12 @@ public class CalculusController
 	
 	public void start()
 	{
-		processInput();
+		
+	}
+	
+	public CalcFrame getTheFrame()
+	{
+		return theFrame;
 	}
 	
 	private String processInput(String input)

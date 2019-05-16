@@ -277,7 +277,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("0"); 
 			}
 		});
 		
@@ -285,7 +285,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("1");
 			}
 		});
 		
@@ -293,7 +293,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("2");
 			}
 		});
 		
@@ -301,7 +301,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("3");
 			}
 		});
 		
@@ -309,7 +309,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("4");
 			}
 		});
 		
@@ -317,7 +317,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("5");
 			}
 		});
 		
@@ -325,7 +325,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("6");
 			}
 		});
 		
@@ -333,7 +333,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("7");
 			}
 		});
 		
@@ -341,7 +341,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("8");
 			}
 		});
 		
@@ -349,7 +349,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("9");
 			}
 		});
 	}

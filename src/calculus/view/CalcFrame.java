@@ -8,11 +8,13 @@ public class CalcFrame extends JFrame
 	private CalculusController theController;
 	private CalcPanel thePanel;
 	
-	public CalcFrame(CalculusController theController, CalcPanel thePanel)
+	public CalcFrame(CalculusController theController)
 	{
 		super();
+		
 		this.theController = theController;
-		this.thePanel = thePanel;
+		this.thePanel = new CalcPanel(theController);
+		
 		setupFrame();
 	}
 	
