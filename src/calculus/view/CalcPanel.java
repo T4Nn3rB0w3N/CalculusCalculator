@@ -51,7 +51,9 @@ public class CalcPanel extends JPanel
 		this.clearButton = new JButton("Clear");
 		this.inputField = new JTextField("input here");
 		theLayout.putConstraint(SpringLayout.WEST, inputField, 49, SpringLayout.WEST, this);
-		this.outputArea = new JTextArea("");
+		this.outputArea = new JTextArea("", 1, 20);
+		theLayout.putConstraint(SpringLayout.NORTH, outputArea, 5, SpringLayout.NORTH, inputField);
+		theLayout.putConstraint(SpringLayout.WEST, outputArea, 4, SpringLayout.EAST, inputField);
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
