@@ -192,7 +192,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("*");
 			}
 		});
 		
@@ -200,7 +200,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("+");
 			}
 		});
 		
@@ -208,7 +208,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("-");
 			}
 		});
 		
@@ -216,7 +216,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("/");
 			}
 		});
 		
@@ -225,7 +225,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("log(");
 			}
 		});
 		
@@ -241,7 +241,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("ln(");
 			}
 		});
 		
@@ -250,7 +250,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print(".");
 			}
 		});
 		
@@ -258,7 +258,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print("(");
 			}
 		});
 		
@@ -266,14 +266,14 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				System.out.print(")");
 			}
 		});
 		
 		//------------NUMBER ActionListeners
 		/*
 		 * Need to find a way where when number buttons are pressed, 
-		 * 		numbers show up in the input field
+		 * 		numbers show up in the outputArea
 		 */
 		zero.addActionListener(new ActionListener()
 		{
