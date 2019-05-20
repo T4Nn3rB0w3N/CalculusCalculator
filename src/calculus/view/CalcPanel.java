@@ -4,6 +4,7 @@ import javax.swing.*;
 import calculus.controller.CalculusController;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 public class CalcPanel extends JPanel
 {
@@ -13,7 +14,7 @@ public class CalcPanel extends JPanel
 	private JButton enterButton;
 	private JButton clearButton;
 	private JTextField inputField;
-	private JTextArea outputArea;
+	private JTextField outputArea;
 	//////////FOUR BASIC OPERATIONS/////////
 	private JButton multiplyButton;
 	private JButton addButton;
@@ -38,11 +39,10 @@ public class CalcPanel extends JPanel
 	private JButton seven;
 	private JButton eight;
 	private JButton nine;
+	private ArrayList<String> theNumbers;
 	
 	
-	
-	
-	public CalcPanel(CalculusController theController)
+	public CalcPanel(CalculusController theController, ArrayList<String> theNumbers)
 	{
 		super();
 		this.theController = theController;
@@ -51,9 +51,10 @@ public class CalcPanel extends JPanel
 		this.clearButton = new JButton("Clear");
 		this.inputField = new JTextField("input here");
 		theLayout.putConstraint(SpringLayout.WEST, inputField, 49, SpringLayout.WEST, this);
-		this.outputArea = new JTextArea("", 1, 20);
+		this.outputArea = new JTextField("");
 		theLayout.putConstraint(SpringLayout.NORTH, outputArea, 5, SpringLayout.NORTH, inputField);
 		theLayout.putConstraint(SpringLayout.WEST, outputArea, 4, SpringLayout.EAST, inputField);
+		theLayout.putConstraint(SpringLayout.EAST, outputArea, 225, SpringLayout.EAST, inputField);
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
@@ -79,6 +80,7 @@ public class CalcPanel extends JPanel
 		this.seven = new JButton("7");
 		this.eight = new JButton("8");
 		this.nine = new JButton("9");
+		this.theNumbers = new ArrayList<String>();
 		
 		
 		
@@ -86,6 +88,11 @@ public class CalcPanel extends JPanel
 		setupLayout();
 		setupListeners();
 		
+	}
+	
+	private ArrayList<String> getTheNumbers()
+	{
+		return theNumbers;
 	}
 	
 	private void setupPanel()
@@ -183,7 +190,7 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				outputArea.setText("");
 			}
 		});
 		
@@ -295,7 +302,9 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("2");
+				theNumbers.add("2");
+				outputArea.setText(getTheNumbers());
+				
 			}
 		});
 		
