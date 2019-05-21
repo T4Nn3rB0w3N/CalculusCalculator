@@ -88,7 +88,7 @@ public class CalcPanel extends JPanel
 		
 	}
 	
-	private String getTheNumbers()
+	public String getTheNumbers()
 	{
 		String numbers = "";
 		for(String number : theNumbers)

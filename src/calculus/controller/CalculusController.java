@@ -4,9 +4,6 @@ import calculus.view.*;
 
 public class CalculusController
 {
-	private int a;
-	private int b;
-	private int c;
 	private String operation;
 	private CalcFrame theFrame;
 	private CalcPanel thePanel;
@@ -14,13 +11,11 @@ public class CalculusController
 	public CalculusController()
 	{
 		theFrame = new CalcFrame(this);
+		thePanel = new CalcPanel(this);
 	}
 	
-	public CalculusController(int a, int b, int c, String operation)
+	public CalculusController(String operation)
 	{
-		this.a = a;
-		this.b = b;
-		this.c = c;
 		this.operation = operation;
 	}
 	
@@ -32,6 +27,11 @@ public class CalculusController
 	public CalcFrame getTheFrame()
 	{
 		return theFrame;
+	}
+	
+	public CalcPanel getThePanel()
+	{
+		return thePanel;
 	}
 	
 	private String processInput(String input)
@@ -48,7 +48,7 @@ public class CalculusController
 		 */
 	}
 	
-	private void recognizeOperations()
+	public void recognizeOperations()
 	{
 		if (operation == "+")
 		{
