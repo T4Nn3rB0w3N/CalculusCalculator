@@ -1,7 +1,6 @@
 package calculus.controller;
 
 import calculus.view.*;
-import java.util.ArrayList;
 
 public class CalculusController
 {

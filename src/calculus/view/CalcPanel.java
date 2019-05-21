@@ -42,7 +42,7 @@ public class CalcPanel extends JPanel
 	private ArrayList<String> theNumbers;
 	
 	
-	public CalcPanel(CalculusController theController, ArrayList<String> theNumbers)
+	public CalcPanel(CalculusController theController)
 	{
 		super();
 		this.theController = theController;
@@ -50,11 +50,9 @@ public class CalcPanel extends JPanel
 		this.enterButton = new JButton("Enter");
 		this.clearButton = new JButton("Clear");
 		this.inputField = new JTextField("input here");
-		theLayout.putConstraint(SpringLayout.WEST, inputField, 49, SpringLayout.WEST, this);
+		
 		this.outputArea = new JTextField("");
-		theLayout.putConstraint(SpringLayout.NORTH, outputArea, 5, SpringLayout.NORTH, inputField);
-		theLayout.putConstraint(SpringLayout.WEST, outputArea, 4, SpringLayout.EAST, inputField);
-		theLayout.putConstraint(SpringLayout.EAST, outputArea, 225, SpringLayout.EAST, inputField);
+		
 		
 		this.multiplyButton = new JButton("*");
 		this.addButton = new JButton("+");
@@ -67,7 +65,6 @@ public class CalcPanel extends JPanel
 		
 		this.decimalPoint = new JButton(".");
 		this.leftParenthesis = new JButton("(");
-		theLayout.putConstraint(SpringLayout.SOUTH, inputField, -40, SpringLayout.NORTH, leftParenthesis);
 		this.rightParenthesis = new JButton(")");
 		
 		this.zero = new JButton("0");
@@ -80,6 +77,7 @@ public class CalcPanel extends JPanel
 		this.seven = new JButton("7");
 		this.eight = new JButton("8");
 		this.nine = new JButton("9");
+		
 		this.theNumbers = new ArrayList<String>();
 		
 		
@@ -90,9 +88,15 @@ public class CalcPanel extends JPanel
 		
 	}
 	
-	private ArrayList<String> getTheNumbers()
+	private String getTheNumbers()
 	{
-		return theNumbers;
+		String numbers = "";
+		for(String number : theNumbers)
+		{
+			numbers += number;
+		}
+		
+		return numbers;
 	}
 	
 	private void setupPanel()
@@ -174,6 +178,12 @@ public class CalcPanel extends JPanel
 		theLayout.putConstraint(SpringLayout.NORTH, nine, 145, SpringLayout.NORTH, this);
 		theLayout.putConstraint(SpringLayout.NORTH, six, 6, SpringLayout.SOUTH, nine);
 		theLayout.putConstraint(SpringLayout.EAST, nine, 0, SpringLayout.EAST, three);
+		theLayout.putConstraint(SpringLayout.WEST, inputField, 49, SpringLayout.WEST, this);
+		theLayout.putConstraint(SpringLayout.NORTH, outputArea, 5, SpringLayout.NORTH, inputField);
+		theLayout.putConstraint(SpringLayout.WEST, outputArea, 4, SpringLayout.EAST, inputField);
+		theLayout.putConstraint(SpringLayout.EAST, outputArea, 225, SpringLayout.EAST, inputField);
+		theLayout.putConstraint(SpringLayout.SOUTH, inputField, -40, SpringLayout.NORTH, leftParenthesis);
+		
 	}
 	
 	private void setupListeners()
@@ -191,6 +201,7 @@ public class CalcPanel extends JPanel
 			public void actionPerformed(ActionEvent click)
 			{
 				outputArea.setText("");
+				theNumbers.removeAll(theNumbers);
 			}
 		});
 		
@@ -199,7 +210,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("*");
+				theNumbers.add("*");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -207,7 +219,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("+");
+				theNumbers.add("+");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -215,7 +228,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("-");
+				theNumbers.add("-");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -223,7 +237,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("/");
+				theNumbers.add("/");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -232,7 +247,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("log(");
+				theNumbers.add("log(");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -248,7 +264,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("ln(");
+				theNumbers.add("ln(");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -257,7 +274,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print(".");
+				theNumbers.add(".");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -265,7 +283,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("(");
+				theNumbers.add("(");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -273,7 +292,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print(")");
+				theNumbers.add(")");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -286,7 +306,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("0"); 
+				theNumbers.add("0");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -294,7 +315,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("1");
+				theNumbers.add("1");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -312,7 +334,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("3");
+				theNumbers.add("3");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -320,7 +343,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("4");
+				theNumbers.add("4");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -328,7 +352,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("5");
+				theNumbers.add("5");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -336,7 +361,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("6");
+				theNumbers.add("6");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -344,7 +370,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("7");
+				theNumbers.add("7");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -352,7 +379,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("8");
+				theNumbers.add("8");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 		
@@ -360,7 +388,8 @@ public class CalcPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				System.out.print("9");
+				theNumbers.add("9");
+				outputArea.setText(getTheNumbers());
 			}
 		});
 	}
