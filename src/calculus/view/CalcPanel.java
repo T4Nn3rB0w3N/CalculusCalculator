@@ -88,6 +88,11 @@ public class CalcPanel extends JPanel
 		
 	}
 	
+	public ArrayList<String> getTheNumberList()
+	{
+		return theNumbers;
+	}
+	
 	public String getTheNumbers()
 	{
 		String numbers = "";
